@@ -14,3 +14,8 @@ variable "app_object_id" {
   type        = string
   description = "The application object id that will be managed by HashiCorp Vault."
 }
+
+variable "num_of_token_usage" {
+  type        = string
+  description = "Number of times the token can be used to generate a client secret"
+}

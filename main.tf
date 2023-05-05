@@ -29,6 +29,7 @@ resource "vault_azure_auth_backend_role" "azure-role" {
   token_max_ttl           = 1800
   token_policies          = [vault_policy.azure-policy.name]
   token_no_default_policy = true
+  token_num_uses          = var.num_of_token_usage
 }
 
 resource "vault_azure_secret_backend" "azure" {
